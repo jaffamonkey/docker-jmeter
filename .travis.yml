@@ -1,0 +1,4 @@
+language: java
+
+script:
+- docker run -v $(pwd):/jmeter -t droplr/jmeter -n -t examples/scenario-stress.jmx -Jcsv examples/urls.csv -l results.jtl
